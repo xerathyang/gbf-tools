@@ -2,7 +2,7 @@
   "name": "gbf-tools",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://xerathyang.github.io/gbf-tools",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
