@@ -2,7 +2,8 @@ import * as treasures from "../../utils/Items/treasures";
 import { makeMaterial, makeItem, resolveMaterials } from "../../utils/Items/Item";
 import { 
   VerumProofRouter,
-  LusterRouter
+  LusterRouter,
+  ArcarumFragmentRouter
 } from "./arcarumMaterialRouter";
 import { ArcarumPriorities } from "./arcarumCosts"
 
@@ -11,7 +12,8 @@ const SSR0 = 1;
 const SSR1 = 2;
 const SSR2 = 3;
 const SSR3 = 4;
-const FLB = 5;
+const SSR4 = 5;
+const SSR5 = 6;
 
 const summonToElement = {
     Justice: "water",
@@ -94,22 +96,37 @@ const SSR3Weapon = name => {
   // Router returns an array of materials
   list.push(...LusterRouter(element, 50));
   list.push(...VerumProofRouter(element, 200));
+  
+  return makeItem(WeaponId[name], name, "weapon", {isCrafted:true, craftMaterials:list});
+};
+
+const SSR4Weapon = name => {
+  let element = summonToElement[name];
+  let list = [];
+  list.push(makeMaterial(treasures.NewWorldQuartz, 20, ArcarumPriorities.RARE));
+  list.push(makeMaterial(treasures.Veritas(name), 150, ArcarumPriorities.IMPORTANT));
+  list.push(makeMaterial(treasures.SixDragonJewel(summonToElement[name]), 30));
+  list.push(makeMaterial(treasures.Astra(summonToElement[name]), 120, ArcarumPriorities.IMPORTANT));
+  list.push(makeMaterial(treasures.Idean(name), 100, ArcarumPriorities.IMPORTANT));
+  // Router returns an array of materials
+  list.push(...LusterRouter(element, 60));
+  list.push(...VerumProofRouter(element, 250));
 
   return makeItem(WeaponId[name], name, "weapon", {isCrafted:true, craftMaterials:list});
   };
 
-  const FLBWeapon = name => {
+  const SSR5Weapon = name => {
     let element = summonToElement[name];
     let list = [];
-    list.push(makeMaterial(treasures.NewWorldQuartz, 20, ArcarumPriorities.RARE));
-    list.push(makeMaterial(treasures.Veritas(name), 150, ArcarumPriorities.IMPORTANT));
-    list.push(makeMaterial(treasures.Idean(name), 100, ArcarumPriorities.IMPORTANT));
-    list.push(makeMaterial(treasures.SixDragonJewel(summonToElement[name]), 30)); 
+    list.push(makeMaterial(treasures.NewWorldQuartz, 30, ArcarumPriorities.RARE));
+    list.push(makeMaterial(treasures.Veritas(name), 170, ArcarumPriorities.IMPORTANT));
+    list.push(makeMaterial(treasures.Idean(name), 130, ArcarumPriorities.IMPORTANT));
+    list.push(makeMaterial(treasures.SixDragonDropItem(summonToElement[name]), 30)); 
     list.push(makeMaterial(treasures.Astra(summonToElement[name]), 120, ArcarumPriorities.IMPORTANT));
+    list.push(makeMaterial(treasures.EternitySand, 3)); 
       // Router returns an array of materials
-    list.push(...LusterRouter(element, 60));
-    list.push(...VerumProofRouter(element, 250));
-  
+    list.push(...LusterRouter(element, 70));
+    list.push(...ArcarumFragmentRouter(name, 30));
     return makeItem(WeaponId[name], name, "weapon", {isCrafted:true, craftMaterials:list});
     };
 
@@ -126,8 +143,10 @@ export const weaponFactory = (name, step) => {
       return SSR2Weapon(name);
     case SSR3:
       return SSR3Weapon(name);
-    case FLB:
-      return FLBWeapon(name);
+    case SSR4:
+      return SSR4Weapon(name);
+    case SSR5:
+      return SSR5Weapon(name);
     default:
       console.log("Wrong step for weapon ", name, step);
   }
