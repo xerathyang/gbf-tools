@@ -39,26 +39,19 @@ export default function ToolList({ tools, onClick }) {
           <Divider />
           <CardContent>
           <Typography variant="body1">
+              <b>2023-03-10</b> 新增轉世武器五突材料{" "}
+            </Typography>
+            <List dense={true}>
+            </List>
+            <Divider />   
+
+          <Typography variant="body1">
               <b>2023-03-10</b> 從原始Repo分支{" "}
             </Typography>
             <List dense={true}>
               <ListItem>原始網址:https://github.com/niccolozy/gbf-tools</ListItem>
             </List>
-            <Divider />
 
-          <Typography variant="body1">
-              <b>2022-06-26</b> 古战场Hell200数据{" "}
-            </Typography>
-            <List dense={true}>
-            </List>
-            <Divider />
-
-          <Typography variant="body1">
-              <b>2022-02-26</b> 转世材料页面添加贤者武器终突{" "}
-            </Typography>
-            <List dense={true}>
-            </List>
-            <Divider />
           </CardContent>
         </Card>
       </Grid>

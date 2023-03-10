@@ -3,7 +3,7 @@ import ArcarumStepInput from "./ArcarumStepInput"
 import propTypes from "prop-types";
 
 const stepChoices = [
-  "未获得",
+  "未獲得",
   "SSR0突",
   "SSR1突",
   "SSR2突",
@@ -15,7 +15,7 @@ const stepChoices = [
 export default function WeaponStepInput({ trackedWeapons, onStepChange }) {
   return (
     <ArcarumStepInput
-      title="贤者武器进度"
+      title="賢者武器進度"
       trackedItem={trackedWeapons}
       stepChoices={stepChoices}
       fieldnames={{current:"weaponCurrent", target:"weaponTarget"}}

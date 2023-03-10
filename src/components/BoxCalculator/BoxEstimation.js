@@ -17,10 +17,10 @@ export default function BoxEstimation({ payload }) {
         <TableHead>
           <TableRow>
             <TableCell>
-              <b>战斗预测</b>
+              <b>戰鬥預測</b>
             </TableCell>
             <TableCell align="center">
-              <b>数量</b>
+              <b>數量</b>
             </TableCell>
             <TableCell align="center">
               <b>半红</b>
@@ -46,7 +46,7 @@ export default function BoxEstimation({ payload }) {
                     ) : (
                       <IconText
                         text={value.meat}
-                        msg={"需要补肉"}
+                        msg={"需要補肉"}
                         iconType="warning"
                       />
                     ))) ||

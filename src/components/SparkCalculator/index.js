@@ -87,7 +87,7 @@ export default function SparkCalculator(props) {
           <CardContent>
             <TextField
               name="crystal"
-              label="宝晶石"
+              label="寶晶石"
               variant="standard"
               value={crystal}
               onChange={e => {
@@ -105,7 +105,7 @@ export default function SparkCalculator(props) {
           <CardContent>
             <TextField
               name="crystal"
-              label="单抽券"
+              label="單抽券"
               variant="standard"
               value={singleRollTicket}
               onChange={e => {
@@ -123,7 +123,7 @@ export default function SparkCalculator(props) {
           <CardContent>
             <TextField
               name="crystal"
-              label="10连券"
+              label="10連券"
               variant="standard"
               value={tenRollTicket}
               onChange={e => {
@@ -136,7 +136,7 @@ export default function SparkCalculator(props) {
       <Grid item xs={12}>
         <Card>
           <CardHeader
-            title="攒井进度"
+            title="存井進度"
             titleTypographyProps={{ variant: "h6" }}
           />
           <Divider />

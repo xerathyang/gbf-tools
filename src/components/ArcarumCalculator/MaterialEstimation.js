@@ -12,7 +12,7 @@ export default function MaterialEstimation({ materials }) {
   return (
     <LocalInventoryContextProvider>
       <TableContainer component={Card}>
-        <CardHeader title="材料总览" />
+        <CardHeader title="材料總覽" />
         {types.map(type => (
           <MaterialTable
             key={type}

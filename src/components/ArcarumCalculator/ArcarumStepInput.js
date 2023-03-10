@@ -57,7 +57,7 @@ export default function ArcarumStepInput({ title, trackedItem, stepChoices, fiel
                       style={{ marginLeft: 10, marginRight: 10 }}
                       error={typeof(current) == "undefined" ? true : false}
                     >
-                      <InputLabel>已完成进度</InputLabel>
+                      <InputLabel>已完成進度</InputLabel>
                       <Select
                         name={fieldnames.current}
                         value={typeof(current) == "undefined" ? '' : current }
@@ -79,7 +79,7 @@ export default function ArcarumStepInput({ title, trackedItem, stepChoices, fiel
                       style={{ marginLeft: 10, marginRight: 10 }}
                       error={typeof(target) == "undefined" ? true : false}
                     >
-                      <InputLabel>目标进度</InputLabel>
+                      <InputLabel>目标進度</InputLabel>
                       <Select
                         name={fieldnames.target}
                         value={typeof(target) == "undefined" ? '' : target}

@@ -3,17 +3,17 @@ import ArcarumStepInput from "./ArcarumStepInput"
 import propTypes from "prop-types";
 
 const stepChoices = [
-  "未解锁",
-  "解锁1格",
-  "解锁2格",
-  "解锁3格",
-  "解锁4格"
+  "未解鎖",
+  "解鎖1格",
+  "解鎖2格",
+  "解鎖3格",
+  "解鎖4格"
 ];
 
 export default function DomainStepInput({ trackedEvoker, onStepChange }) {
   return (
     <ArcarumStepInput
-      title="贤者领域进度"
+      title="賢者領域進度"
       trackedItem={trackedEvoker}
       stepChoices={stepChoices}
       fieldnames={{current:"domainCurrent", target:"domainTarget"}}

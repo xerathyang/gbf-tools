@@ -45,10 +45,10 @@ export default function BoxProgress({ progress }) {
               <b>进度</b>
             </TableCell>
             <TableCell align="center">
-              <b>需求战货</b>
+              <b>需求戰貨</b>
             </TableCell>
             <TableCell align="center">
-              <b>已完成战货</b>
+              <b>已完成戰貨</b>
             </TableCell>
             <TableCell align="center">
               <b>当前进度</b>
@@ -83,7 +83,7 @@ export default function BoxProgress({ progress }) {
           </TableRow>
           <TableRow>
             <TableCell component="th" scope="row">
-              待刷战货
+              待刷戰貨
             </TableCell>
             <TableCell align="center">{rest > 0 ? rest : 0}</TableCell>
           </TableRow>

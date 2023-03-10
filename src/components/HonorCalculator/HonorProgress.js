@@ -37,16 +37,16 @@ export default function BoxProgress({ progress }) {
         <TableHead>
           <TableRow>
             <TableCell>
-              <b>进度</b>
+              <b>進度</b>
             </TableCell>
             <TableCell align="center">
-              <b>目标贡献</b>
+              <b>目標貢獻</b>
             </TableCell>
             <TableCell align="center">
-              <b>完成贡献</b>
+              <b>完成貢獻</b>
             </TableCell>
             <TableCell align="center">
-              <b>当前进度</b>
+              <b>當前進度</b>
             </TableCell>
           </TableRow>
         </TableHead>

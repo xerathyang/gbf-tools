@@ -129,11 +129,11 @@ class Header extends Component {
           <List>
             <ListItem
                 button
-                key="首页"
+                key="首頁"
                 selected={this.props.currentTool === -1}
                 onClick={e => this.handleItemClick(e, -1)}
             >
-              <ListItemText primary="首页" />
+              <ListItemText primary="首頁" />
             </ListItem>
             {this.props.tools.map((text, index) => (
               <ListItem

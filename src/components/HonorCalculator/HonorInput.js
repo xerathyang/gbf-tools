@@ -34,14 +34,14 @@ export default function BoxInput({ current, onChange }) {
     <Card className={classes.root}>
       <CardHeader
         className={classes.header}
-        title="数据输入"
+        title="數據輸入"
         titleTypographyProps={{ variant: "subtitle1" }}
       />
       <Divider className={classes.devider} />
 
       <TextField
         name="targetHonor"
-        label="目标贡献"
+        label="目標貢獻"
         variant="outlined"
         className={classes.input}
         onChange={onValueChange}
@@ -50,7 +50,7 @@ export default function BoxInput({ current, onChange }) {
       />
       <TextField
         name="currentHonor"
-        label="已有贡献"
+        label="已有貢獻"
         variant="outlined"
         className={classes.input}
         onChange={onValueChange}
@@ -59,7 +59,7 @@ export default function BoxInput({ current, onChange }) {
       />
       <TextField
         name="currentMeat"
-        label="持有肉数"
+        label="持有肉數"
         variant="outlined"
         className={classes.input}
         onChange={onValueChange}

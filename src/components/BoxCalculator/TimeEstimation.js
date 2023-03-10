@@ -81,7 +81,7 @@ export default function BoxEstimation({ payload }) {
               <b>单场时间</b>
             </TableCell>
             <TableCell align="center">
-              <b>数量</b>
+              <b>數量</b>
             </TableCell>
             <TableCell align="center">
               <b>预估时间</b>

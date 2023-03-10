@@ -65,7 +65,7 @@ export default function ProbaChart({ props }) {
       if (Number(targetProba) > 0){
         for (let i = 0; i <= 2 * successEstimation || binomialDist(i, Number(targetProba) / 100, targetRoll) > 0.01; i++){
           let p = binomialDist(i, Number(targetProba) / 100, targetRoll);
-          binomialArray.push({出货次数: i+"次", 出货x次概率: p});
+          binomialArray.push({出貨次數: i+"次", 出貨x次概率: p});
         }
       }
     }
@@ -76,7 +76,7 @@ export default function ProbaChart({ props }) {
         rollStep = 10 ** (Math.floor(Math.log10(maxRoll)) - 1);
       }
       for (let currentRoll = 0; currentRoll <= maxRoll; currentRoll += rollStep){
-        cdfArray.push({抽卡次数: currentRoll+"抽", 累进出货概率: geoDistCDF(Number(targetProba) / 100, currentRoll), 平均出货期望: Number(targetProba) / 100 * currentRoll});
+        cdfArray.push({抽卡次數: currentRoll+"抽", 累進出貨概率: geoDistCDF(Number(targetProba) / 100, currentRoll), 平均出貨期望: Number(targetProba) / 100 * currentRoll});
       }
     }
   }
@@ -84,7 +84,7 @@ export default function ProbaChart({ props }) {
   return (
     <Card>
       <CardHeader
-        title="出货概率计算"
+        title="出貨概率計算"
         titleTypographyProps={{ variant: "h6" }}
       />
 
@@ -93,17 +93,17 @@ export default function ProbaChart({ props }) {
       <Grid container className={classes.root}>
         <Grid item xs={12}>
           <Alert severity="info">
-            计算卡池概率为p的SSR在抽卡n次时的出货可能性。同时基于几何分布和二项分布给出：<br/>
-            1.抽卡x次前能出货的累计概率 <br/>
-            2.目标抽卡次数下出货k次的概率分布 <br/>
-            (也能用来计算Raid掉率，比如概率设为2.5%相当于计算自发超巴出金率)
+            計算卡池概率為p的SSR在抽卡n次時的出貨可能性。同时基於幾何分布和二項分布给出：<br/>
+            1.抽卡x次前能出貨的累計概率 <br/>
+            2.目標抽卡次數下出貨k次的概率分布 <br/>
+            (也能用來計算Raid掉率，比如概率設為2.5%相當於計算自發超巴出金率)
           </Alert>
         </Grid>
         <Grid item xs={12} sm={3}>
           <TextField
             name="p"
             className={classes.input}
-            label="目标概率"
+            label="目標概率"
             variant="outlined"
             value={targetProba}
             InputProps={{
@@ -118,7 +118,7 @@ export default function ProbaChart({ props }) {
           <TextField
             name="p"
             className={classes.input}
-            label="目标抽卡次数"
+            label="目標抽卡次數"
             variant="outlined"
             value={targetRoll}
             error={isWrongRoll}
@@ -128,9 +128,9 @@ export default function ProbaChart({ props }) {
 
         <Grid item xs={12} sm={3}>
           <Typography variant="body1" className={classes.text}>
-            { (isWrongProba || isWrongRoll) ? "输入数据有误，请输入正确的概率和抽卡次数" :
-              "出货至少一次概率：" + Math.floor(successProbability * 10000) / 100 + 
-                                              "%, 出货次数期望: " + successEstimation.toFixed(2)}
+            { (isWrongProba || isWrongRoll) ? "输入數據有誤，请输入正確的概率和抽卡次數" :
+              "出貨至少一次概率：" + Math.floor(successProbability * 10000) / 100 + 
+                                              "%, 出貨次數期望: " + successEstimation.toFixed(2)}
           </Typography>
         </Grid>
 
@@ -143,7 +143,7 @@ export default function ProbaChart({ props }) {
               {(failProbability * 100).toFixed(4)}%
             </Typography>
             <Typography variant="body1" className={classes.text} display="inline">
-              的概率等于把宝晶石扔水里！！！
+              的概率等於把寶晶石扔水里！！！
             </Typography>
           </Grid>
         )}
@@ -165,13 +165,13 @@ export default function ProbaChart({ props }) {
                     }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="抽卡次数" />
+                    <XAxis dataKey="抽卡次數" />
                     <YAxis yAxisId="left" />
                     <YAxis yAxisId="right" orientation="right" />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" yAxisId="left" dataKey="累进出货概率" stroke="#8884d8" activeDot={{ r: 4 }} />
-                    <Line type="monotone" yAxisId="right" dataKey="平均出货期望" stroke="#82ca9d" />
+                    <Line type="monotone" yAxisId="left" dataKey="累進出貨概率" stroke="#8884d8" activeDot={{ r: 4 }} />
+                    <Line type="monotone" yAxisId="right" dataKey="平均出貨期望" stroke="#82ca9d" />
                   </LineChart>
                 </ResponsiveContainer>
               </Container>
@@ -188,11 +188,11 @@ export default function ProbaChart({ props }) {
                     }}
                   >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="出货次数" />
+                    <XAxis dataKey="出貨次數" />
                     <YAxis yAxisId="left" />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" yAxisId="left" dataKey="出货x次概率" stroke="#8884d8" activeDot={{ r: 4 }} />
+                    <Line type="monotone" yAxisId="left" dataKey="出貨x次概率" stroke="#8884d8" activeDot={{ r: 4 }} />
                   </LineChart>
                 </ResponsiveContainer>
               </Container>

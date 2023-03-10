@@ -200,7 +200,7 @@ function HonorCalculator(props) {
                 <Grid item xs={6}>
                   {estimationMode === SOLOandMEAT && (
                     <Typography variant="subtitle2" align="center">
-                      计算假设平均每只{meatChoice}掉落
+                      計算假設平均每隻{meatChoice}掉落
                       {mobInfo[meatChoice].meatGain}肉
                     </Typography>
                   )}

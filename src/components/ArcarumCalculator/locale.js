@@ -7,11 +7,11 @@ export const localeStrings = {
       en: "Rare Materials"
     },
     [ArcarumPriorities.IMPORTANT]: {
-      zh: "重要转世素材",
+      zh: "重要轉世素材",
       en: "Important Materials"
     },
     [ArcarumPriorities.OTHERARCARUM]: {
-      zh: "其它转世素材",
+      zh: "其它轉世素材",
       en: "Other Arcarum Materials"
     },
     [ArcarumPriorities.OTHER]: {
@@ -19,7 +19,7 @@ export const localeStrings = {
       en: "Other Materials"
     },
     [ArcarumPriorities.BASIC]: {
-      zh: "基础素材",
+      zh: "基礎素材",
       en: "Basic Materials"
     }
   }
