@@ -25,7 +25,7 @@ export default function Footer(props) {
         <Typography className={classes.text}>GBF小工具合集</Typography>
         <div className={classes.grow} />
         <Link
-          href="https://github.com/niccolozy/"
+          href="https://github.com/xerathyang/"
           target="_blank"
           color="inherit"
           className={classes.linkIcon}
