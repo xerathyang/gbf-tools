@@ -128,7 +128,7 @@ export default function ProbaChart({ props }) {
 
         <Grid item xs={12} sm={3}>
           <Typography variant="body1" className={classes.text}>
-            { (isWrongProba || isWrongRoll) ? "输入數據有誤，请输入正確的概率和抽卡次數" :
+            { (isWrongProba || isWrongRoll) ? "輸入數據有誤，請輸入正確的概率和抽卡次數" :
               "出貨至少一次概率：" + Math.floor(successProbability * 10000) / 100 + 
                                               "%, 出貨次數期望: " + successEstimation.toFixed(2)}
           </Typography>
@@ -150,7 +150,7 @@ export default function ProbaChart({ props }) {
       </Grid>
       <Card>
         <CardHeader
-          title="概率分布曲线"
+          title="概率分布曲線"
           titleTypographyProps={{ variant: "h6" }}
         />
         <Grid container>

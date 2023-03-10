@@ -53,7 +53,7 @@ export default function BoxProgress({ progress }) {
         <TableBody>
           <TableRow>
             <TableCell component="th" scope="row">
-              总进度
+              總進度
             </TableCell>
             <TableCell align="center">{progress.total}</TableCell>
             <TableCell align="center">{progress.completed}</TableCell>

@@ -3,7 +3,7 @@ import ArcarumStepInput from "./ArcarumStepInput"
 import propTypes from "prop-types";
 
 const stepChoices = [
-  "未获得",
+  "未獲得",
   "SR0突",
   "SR1突",
   "SR2突",
@@ -11,13 +11,13 @@ const stepChoices = [
   "SSR3突",
   "SSR4突",
   "SSR5突",
-  "贤者"
+  "賢者"
 ];
 
 export default function SummonStepInput({ trackedSummons, onStepChange }) {
   return (
     <ArcarumStepInput
-      title="转世召唤石进度"
+      title="轉世召唤石進度"
       trackedItem={trackedSummons}
       stepChoices={stepChoices}
       fieldnames={{current:"current", target:"target"}}
