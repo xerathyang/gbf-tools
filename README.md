@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Readme
 
-a set of useful tools (planned) for gbf hosted at https://niccolozy.github.io/gbf-tools/
+a set of useful tools (planned) for gbf hosted at https://xerathyang.github.io/gbf-tools/
