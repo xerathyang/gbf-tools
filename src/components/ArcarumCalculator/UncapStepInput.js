@@ -4,26 +4,24 @@ import propTypes from "prop-types";
 
 const stepChoices = [
   "未解鎖",
-  "解鎖1格",
-  "解鎖2格",
-  "解鎖3格",
-  "解鎖4格",
+  "賢者終突",
+  "解放第4技能",
 ];
 
-export default function DomainStepInput({ trackedEvoker, onStepChange }) {
+export default function UncapStepInput({ trackedUncap, onStepChange }) {
   return (
     <ArcarumStepInput
-      title="賢者領域進度"
-      trackedItem={trackedEvoker}
+      title="賢者終突進度"
+      trackedItem={trackedUncap}
       stepChoices={stepChoices}
-      fieldnames={{current:"domainCurrent", target:"domainTarget"}}
+      fieldnames={{current:"uncapCurrent", target:"uncapTarget"}}
       onStepChange={onStepChange}
     />
   );
 }
 
-DomainStepInput.propTypes ={
-    trackedEvoker: propTypes.arrayOf(propTypes.shape({
+UncapStepInput.propTypes ={
+    trackedUncap: propTypes.arrayOf(propTypes.shape({
     name: propTypes.string,
     icon: propTypes.string,
     current: propTypes.number,

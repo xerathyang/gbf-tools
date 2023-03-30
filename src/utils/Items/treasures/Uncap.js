@@ -248,6 +248,9 @@ const StarIdean = makeItem(25013, "Star Idean", "item");
 const MoonIdean = makeItem(25014, "Moon Idean", "item");
 const SunIdean = makeItem(25015, "Sun Idean", "item");
 const JudgementIdean = makeItem(25016, "Judgement Idean", "item");
+
+const WorldIdean = makeItem(25017, "World Idean", "item");
+
 export const Idean = summon => {
   switch (summon) {
     case "Justice":
@@ -270,6 +273,8 @@ export const Idean = summon => {
       return SunIdean;
     case "Judgement":
       return JudgementIdean;
+    case "World":
+      return WorldIdean;
     default:
       console.log(`Wrong summon for Idean: ${summon}`);
   }

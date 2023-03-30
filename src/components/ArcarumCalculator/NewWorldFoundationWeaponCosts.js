@@ -118,12 +118,12 @@ const SSR4Weapon = name => {
   const SSR5Weapon = name => {
     let element = summonToElement[name];
     let list = [];
+    list.push(makeMaterial(treasures.EternitySand, 3, ArcarumPriorities.RARE)); 
     list.push(makeMaterial(treasures.NewWorldQuartz, 30, ArcarumPriorities.RARE));
     list.push(makeMaterial(treasures.Veritas(name), 170, ArcarumPriorities.IMPORTANT));
     list.push(makeMaterial(treasures.Idean(name), 130, ArcarumPriorities.IMPORTANT));
     list.push(makeMaterial(treasures.SixDragonDropItem(summonToElement[name]), 30)); 
     list.push(makeMaterial(treasures.Astra(summonToElement[name]), 120, ArcarumPriorities.IMPORTANT));
-    list.push(makeMaterial(treasures.EternitySand, 3)); 
       // Router returns an array of materials
     list.push(...LusterRouter(element, 70));
     list.push(...ArcarumFragmentRouter(name, 30));
