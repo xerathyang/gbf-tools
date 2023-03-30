@@ -6,7 +6,7 @@ import {VerumProof} from "../../utils/Items/treasures/Uncap";
 import {TrialFragment} from "../../utils/Items/treasures/Uncap";
 import * as World from "../../utils/Items/treasures/World";
 import {ArcarumPriorities} from "./arcarumCosts"
-import {Luster} from "../../utils/Items/treasures/Uncap";
+import {Luster,Gospel} from "../../utils/Items/treasures/Uncap";
 
 export const HazeRouter = (element, quantity) => {
   switch(element) {
@@ -111,5 +111,16 @@ export const LusterRouter = (element, quantity) => {
       return [makeMaterial(Luster("water"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT), makeMaterial(Luster("earth"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT)];
     default:
       return [makeMaterial(Luster(element), quantity, ArcarumPriorities.IMPORTANT)];
+  }
+};
+
+export const GospelRouter = (element, quantity) => {
+  switch (element) {
+    case "light":
+      return [makeMaterial(Gospel("fire"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT), makeMaterial(Gospel("wind"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT)];
+    case "dark":
+      return [makeMaterial(Gospel("water"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT), makeMaterial(Gospel("earth"), Math.floor(quantity/2), ArcarumPriorities.IMPORTANT)];
+    default:
+      return [makeMaterial(Gospel(element), quantity, ArcarumPriorities.IMPORTANT)];
   }
 };

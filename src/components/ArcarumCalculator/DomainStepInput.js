@@ -7,13 +7,14 @@ const stepChoices = [
   "解鎖1格",
   "解鎖2格",
   "解鎖3格",
-  "解鎖4格"
+  "解鎖4格",
+  "賢者終突"
 ];
 
 export default function DomainStepInput({ trackedEvoker, onStepChange }) {
   return (
     <ArcarumStepInput
-      title="賢者領域進度"
+      title="賢者領域、終突進度"
       trackedItem={trackedEvoker}
       stepChoices={stepChoices}
       fieldnames={{current:"domainCurrent", target:"domainTarget"}}

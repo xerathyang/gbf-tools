@@ -366,3 +366,23 @@ export const Veritas = summon => {
       console.log(`Wrong summon for Veritas: ${summon}`);
   }
 };
+
+//Gospel
+const EgeiroGospel = makeItem(25085, "Gospel of Egeiro", "item");
+const AnalipsisGospel = makeItem(25086, "Gospel of Analipsis", "item");
+const ThysiaGospel = makeItem(25087, "Gospel of Thysia", "item");
+const GeneaGospel = makeItem(25088, "Gospel of Genea", "item");
+export const Gospel = element => {
+  switch (element) {
+    case "fire":
+      return EgeiroGospel;
+    case "water":
+      return AnalipsisGospel;
+    case "earth":
+      return ThysiaGospel;
+    case "wind":
+      return GeneaGospel;
+    default:
+      console.log(`Wrong element for Gospel: ${element}`);
+  }
+};

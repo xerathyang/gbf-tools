@@ -4,7 +4,8 @@ import {
   VerumProofRouter,
   LusterRouter,
   HazeRouter,
-  ArcarumFragmentRouter
+  ArcarumFragmentRouter,
+  GospelRouter
 } from "./arcarumMaterialRouter";
 import { ArcarumPriorities } from "./arcarumCosts"
 
@@ -13,6 +14,7 @@ const UNLOCK1 = 1;
 const UNLOCK2 = 2;
 const UNLOCK3 = 3;
 const UNLOCK4 = 4;
+const EVOKERUNCAP5 = 5;
 
 const summonToElement = {
     Justice: "water",
@@ -91,7 +93,19 @@ const Domain4 = name => {
   list.push(...ArcarumFragmentRouter(name, 20));
 
   return makeItem(EvokerId[name], name, "npc", {isCrafted:true, craftMaterials:list});
-  };
+};
+
+const Uncap5 = name => {
+  let element = summonToElement[name];
+  let list = [];
+  list.push(makeMaterial(treasures.SephiraEvolite, 1, ArcarumPriorities.RARE));
+  list.push(makeMaterial(treasures.SephiraStone, 200, ArcarumPriorities.IMPORTANT));
+  // Router returns an array of materials
+  list.push(...LusterRouter(element, 50));
+  list.push(...GospelRouter(element, 50));
+
+  return makeItem(EvokerId[name], name, "npc", {isCrafted:true, craftMaterials:list});
+};
 
 export const domainFactory = (name, step) => {
   if (typeof step === "undefined")
@@ -106,6 +120,8 @@ export const domainFactory = (name, step) => {
       return Domain3(name);
     case UNLOCK4:
       return Domain4(name);
+    case EVOKERUNCAP5:
+      return Uncap5(name);
     default:
       console.log("Wrong step for evoker domain ", name, step);
   }

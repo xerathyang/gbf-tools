@@ -39,6 +39,14 @@ export default function ToolList({ tools, onClick }) {
           <Divider />
           <CardContent>
           <Typography variant="body1">
+              <b>2023-03-30</b> 新增賢者終突材料{" "}
+            </Typography>
+            <List dense={true}>
+              <ListItem>可以在"賢者領域、終突進度"選項中選取</ListItem>
+            </List>
+            <Divider />   
+          
+          <Typography variant="body1">
               <b>2023-03-10</b> 新增轉世武器五突材料{" "}
             </Typography>
             <List dense={true}>
