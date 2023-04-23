@@ -19,7 +19,7 @@ export const mobInfo = {
     AP: 30,
     BP: 1,
     meat: 0,
-    meatGain: 3.5
+    meatGain: 6.4
   },
   Hell90: {
     hostToken: 45,
