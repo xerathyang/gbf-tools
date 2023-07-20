@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d823865553640b9a07af4dbf533d1f1",
+    "revision": "c96788db3c25a9914c21686eb06549a2",
     "url": "/gbf-tools/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gbf-tools/static/js/2.b509f2cd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e53212f06625f67f34f9",
-    "url": "/gbf-tools/static/js/main.4bdfa814.chunk.js"
+    "revision": "2abfa10faba63d007783",
+    "url": "/gbf-tools/static/js/main.9a3d0c85.chunk.js"
   },
   {
     "revision": "a68f2c983779b4676652",
