@@ -15,11 +15,11 @@ export const mobInfo = {
     hostToken: 26,
     victoryToken: 20,
     mvpToken: 20,
-    soloHonor: 73000,
+    soloHonor: 88000,
     AP: 30,
     BP: 1,
     meat: 0,
-    meatGain: 6.4
+    meatGain: 10.9
   },
   Hell90: {
     hostToken: 45,
@@ -61,9 +61,9 @@ export const mobInfo = {
     hostToken: 160,
     victoryToken: 110,
     mvpToken: 68,
-    soloHonor: 10282248,
+    soloHonor: 13300000,
     AP: 50,
     BP: 3,
-    meat: 30
+    meat: 20
   }
 };

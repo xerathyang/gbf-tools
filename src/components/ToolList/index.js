@@ -39,6 +39,15 @@ export default function ToolList({ tools, onClick }) {
           <Divider />
           <CardContent>
           <Typography variant="body1">
+              <b>2023-07-21</b> 更新古戰場EX+及200HL貢獻和肉量{" "}
+            </Typography>
+            <List dense={true}>
+              <ListItem>EX+: 貢獻從73000提升至88000，期望掉落肉量從6.4提升至10.9</ListItem>
+              <ListItem>200HL: 貢獻從10282248提升至13300000，消耗肉量從30降低至20</ListItem>
+            </List>
+            <Divider />   
+
+          <Typography variant="body1">
               <b>2023-03-30</b> 新增賢者終突材料{" "}
             </Typography>
             <List dense={true}>
